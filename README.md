@@ -1,3 +1,3 @@
 # Automation Code Challenge
-Coding challenge using robot framework for python3.
+Coding challenge using robot framework with Selenium library for python3.
 
