@@ -1,0 +1,7 @@
+*.jpg
+*.html
+*.xml
+*.exe
+*.log
+*.png
+__pycache__/

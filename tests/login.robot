@@ -3,12 +3,13 @@ Documentation     Suite for logging into LibreView
 ...
 ...               This test has a workflow that is created using keywords in
 ...               the imported resource files.
-Variables         variables.yaml
+Variables         ../variables.yaml
+Variables          ../resources/locators/locators.py
 
-Resource          resource.robot
-Resource          page_locale.robot
-Resource          page_login.robot
-Resource          page_sendCode.robot
+Resource          ../resources/resource.robot
+Resource          ../resources/keywordDefinitions/localeKeywords.robot
+Resource          ../resources/keywordDefinitions/loginKeywords.robot
+Resource          ../resources/keywordDefinitions/sendCodeKeywords.robot
 
 Suite Setup       Open Start Page
 Suite Teardown    Close Browser
@@ -28,8 +29,7 @@ Open Start Page
     Title Should Be     LibreView
 
 Wait Login Page
-    Wait Until Element Is Visible   id:loginForm-submit-button
+    Wait Until Element Is Visible   ${LoginButton}
 
 Wait SendCode Page
-    Wait Until Element Is Visible   id:twoFactor-step1-next-button
-
+    Wait Until Element Is Visible   ${TwoFactorFirstButton}

@@ -9,9 +9,6 @@ Library           Screenshot
 
 *** Variables ***
 ${SERVER}         www.libreview.com
-# ${BROWSER}        Firefox
-# ${USERNAME}     codechallengeadc@outlook.com
-# ${PASSWORD}    P@ssword$12
 ${BASE URL}      http://${SERVER}/
 
 *** Keywords ***

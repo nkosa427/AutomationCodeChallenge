@@ -3,17 +3,17 @@ Documentation     2FA send code page
 ...
 ...               This test has a workflow that is created using keywords in
 ...               the imported resource files.
-Resource          resource.robot
+Variables         ../locators/locators.py
 
 *** Keywords ***
 Click Send
-    Click Button    id:twoFactor-step1-next-button
+    Click Button    ${TwoFactorFirstButton}
 
 Verify Button
-    Element Should Be Visible   id:twoFactor-step2-next-button
+    Element Should Be Visible   ${TwoFactorSecondButton}
 
 Verify Button Disabled
-    Element Should Be Disabled  id:twoFactor-step2-next-button
+    Element Should Be Disabled  ${TwoFactorSecondButton}
 
 SendCode Page
     Click Send
