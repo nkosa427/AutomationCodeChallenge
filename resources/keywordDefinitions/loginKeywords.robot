@@ -3,17 +3,17 @@ Documentation     Login page
 ...
 ...               This test has a workflow that is created using keywords in
 ...               the imported resource files.
-Resource          resource.robot
+Variables         ../locators/locators.py
 
 *** Keywords ***
 Input Username
-    Input Text    id:loginForm-email-input    ${USERNAME}
+    Input Text    ${EmailInput}    ${USERNAME}
 
 Input Password
-    Input Text    id:loginForm-password-input    ${PASSWORD}
+    Input Text    ${PasswordInput}    ${PASSWORD}
 
 Click Login
-    Click Button    id:loginForm-submit-button
+    Click Button    ${LoginButton}
 
 Login Page
     Input Username
